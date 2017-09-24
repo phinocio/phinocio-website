@@ -1,3 +1,0 @@
-Phinocio.com
-
-I'll make a proper readme later(TM)...
