@@ -11,5 +11,22 @@ let mix = require('laravel-mix');
  |
  */
 
-mix.js('resources/assets/js/app.js', 'public/js')
-   .sass('resources/assets/sass/app.scss', 'public/css');
+if(!mix.inProduction()) {
+    mix.js('resources/assets/js/app.js', 'public/js')
+        .extract(['lodash', 'axios'])
+        .sourceMaps();
+    
+    mix.sass('resources/assets/sass/app.scss', 'public/css').sourceMaps();
+    
+    mix.browserSync('phinocio.dev');
+}
+
+
+if (mix.inProduction()) {
+    mix.js('resources/assets/js/app.js', 'public/js')
+    .extract(['lodash', 'axios']);
+
+    mix.sass('resources/assets/sass/app.scss', 'public/css');
+    mix.version();
+    mix.disableNotifications();
+}
