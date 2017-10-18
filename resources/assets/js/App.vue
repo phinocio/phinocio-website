@@ -129,6 +129,7 @@ export default {
 					title: 'NHL',
 					class: 'blue--text text--darken-3',
 					items: [
+						{ title: 'Anaheim Ducks', route: '/nhl/anaheim-ducks' },
 						{ title: 'Colorado Avalanche', route: '/nhl/colorado-avalanche' },
 						{ title: 'Streamables', route: '/nhl/streamables' }
 					]
