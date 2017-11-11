@@ -37,7 +37,7 @@
 			</v-list>
 		</v-navigation-drawer>
 
-		<v-toolbar class="red accent-4" dark>
+		<v-toolbar class="red darken-4" dark>
 			<v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
 			<v-toolbar-title>Phinocio</v-toolbar-title>
 			
